@@ -1,73 +1,74 @@
-Sparse Matrix - DSA Assignment 2
-This project implements a Sparse Matrix in Python using a dictionary to store non-zero elements. It is designed to efficiently handle large matrices with mostly zero values, as required in Data Structures and Algorithms Assignment 2.
+# Sparse Matrix Implementation - DSA Assignment 2
 
-Features
-✅ Load sparse matrices from a custom-formatted file
+A Python implementation of sparse matrices using dictionaries to efficiently store and operate on large matrices with predominantly zero values.
 
-➕ Perform matrix addition, subtraction, and multiplication
+## Features
 
-🔍 Custom parsing and error handling
+- � **Sparse Storage**: Efficiently stores only non-zero elements
+- 📂 **File I/O**: Load matrices from and save results to text files
+- ➕ **Operations**: 
+  - Matrix addition
+  - Matrix subtraction
+  - Matrix multiplication
+- 🛠 **Built from Scratch**: No external dependencies
+- 🚨 **Error Handling**: Custom parsing and validation
+- 📝 **Dual Output**: Results displayed in console and saved to `output.txt`
 
-❌ No external libraries used – fully built from scratch
+## File Format Specification
 
-📁 Output result saved to output.txt
-
-File Format
-Matrix files must follow this format:
-
-makefile
-Copy
-Edit
+Matrix files must adhere to the following structure:
 rows=3
 cols=3
 (0, 0, 5)
 (1, 2, -3)
 (2, 1, 4)
-The first line defines the number of rows.
 
-The second line defines the number of columns.
+- First line: `rows=<number>` (matrix row count)
+- Second line: `cols=<number>` (matrix column count)
+- Subsequent lines: Non-zero elements as `(row, col, value)` tuples
+  - Row and column indices start at 0
+  - One element per line
 
-Each following line defines a non-zero element in the format (row, col, value).
+## Usage
 
-How to Use
-Run the script:
-
-bash
-Copy
-Edit
-python sparse_matrix.py
-Follow prompts:
-
-bash
-Copy
-Edit
-Enter operation (add, subtract, multiply): add
+1. Run the script:
+   ```bash
+   python sparse_matrix.py
+2. Follow the interactive prompts:Enter operation (add, subtract, multiply): add
 Enter first matrix file path: matrix1.txt
 Enter second matrix file path: matrix2.txt
-Check output:
+3.Results will be:
 
-The result is printed in the console
+Printed to the console
 
-The result is also saved to output.txt
+Saved to output.txt in the same format
+Example
+Input (matrix1.txt):
+rows=2
+cols=2
+(0, 0, 1)
+(1, 1, 2)
+Input (matrix2.txt):
+rows=2
+cols=2
+(0, 1, 3)
+(1, 0, 4)
 
-Example Output
-makefile
-Copy
-Edit
-rows=3
-cols=3
-(0, 0, 8)
-(1, 2, 4)
-(2, 1, 1)
 Requirements
 Python 3.x
 
-No external packages needed
+No external dependencies
+
+Constraints
+⚠️ Addition/Subtraction: Matrices must have identical dimensions
+
+✖️ Multiplication: First matrix's columns must match second matrix's rows
+
+✔️ Validation: All input files must follow the specified format
 
 Notes
-All matrices must be in valid format.
+Zero elements are not stored in memory
 
-Addition and subtraction require matrices with the same dimensions.
+Operations automatically handle sparse matrix optimizations
 
-Multiplication requires the first matrix's columns to match the second matrix's rows.
-
+Results maintain the sparse format (only non-zero values are saved)
