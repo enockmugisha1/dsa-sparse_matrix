@@ -2,7 +2,6 @@
 # Implements a sparse matrix using a dictionary for non-zero elements.
 # Supports loading from file, addition, subtraction, and multiplication.
 # No external libraries used; custom parsing and error handling implemented.
-# Author: Original code written for this assignment.
 
 class SparseMatrix:
     def __init__(self, file_path_or_rows, cols=None):

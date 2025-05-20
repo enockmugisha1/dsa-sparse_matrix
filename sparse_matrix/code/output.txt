@@ -1,0 +1,26 @@
+✅ Test 1 - Valid Addition
+Enter operation (add, subtract, multiply): Enter first matrix file path: Enter second matrix file path: Error: Operation failed: Input file not found: ../sample_inputs/matrix1.txt
+
+========================================
+✅ Test 2 - Valid Subtraction
+Enter operation (add, subtract, multiply): Enter first matrix file path: Enter second matrix file path: Error: Operation failed: Input file not found: ../sample_inputs/matrix1.txt
+
+========================================
+✅ Test 3 - Valid Multiplication
+Enter operation (add, subtract, multiply): Enter first matrix file path: Enter second matrix file path: Result:
+rows=3
+cols=3
+(0, 0, 10)
+(1, 2, 12)
+(2, 2, -1)
+
+
+========================================
+❌ Test 4 - Invalid Format
+Enter operation (add, subtract, multiply): Enter first matrix file path: Enter second matrix file path: Error: Operation failed: Input file not found: ../sample_inputs/invalid_format.txt
+
+========================================
+⚠️ Test 5 - Dimension Mismatch Multiplication
+Enter operation (add, subtract, multiply): Enter first matrix file path: Enter second matrix file path: Error: Operation failed: Input file not found: ../sample_inputs/matrix1.txt
+
+========================================
